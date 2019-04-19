@@ -16,6 +16,7 @@ public class RegisterView extends javax.swing.JFrame {
      */
     public RegisterView() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -26,23 +27,224 @@ public class RegisterView extends javax.swing.JFrame {
     private void initComponents() {
 
         rSPanelGradiente1 = new rspanelgradiente.RSPanelGradiente();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        txtUsernameRegister = new javax.swing.JTextField();
+        txtEmailRegister = new javax.swing.JTextField();
+        txtPasswordRegister = new javax.swing.JTextField();
+        txtPasswordConfirmed = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jlMinimizeRegister = new javax.swing.JLabel();
+        jlClosesRegister = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1070, 678));
+        setUndecorated(true);
 
         rSPanelGradiente1.setColorPrimario(new java.awt.Color(43, 24, 97));
         rSPanelGradiente1.setColorSecundario(new java.awt.Color(174, 82, 168));
-        rSPanelGradiente1.setPreferredSize(new java.awt.Dimension(1070, 678));
+        rSPanelGradiente1.setPreferredSize(new java.awt.Dimension(1080, 680));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(870, 590));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/fondo.png"))); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(43, 24, 97));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Complete your infomation");
+
+        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jRadioButton1.setForeground(new java.awt.Color(153, 153, 153));
+        jRadioButton1.setText("I accept the");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setForeground(new java.awt.Color(12, 188, 154));
+        jLabel3.setText("terms and conditions");
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonregisterOFF.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonregisterON.png"))); // NOI18N
+        jButton1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonregisterON.png"))); // NOI18N
+
+        jLabel4.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel4.setText("You have an account?");
+
+        txtUsernameRegister.setBackground(new java.awt.Color(255, 255, 255));
+        txtUsernameRegister.setForeground(new java.awt.Color(153, 153, 153));
+        txtUsernameRegister.setText("Username");
+        txtUsernameRegister.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(174, 82, 168)));
+        txtUsernameRegister.setPreferredSize(new java.awt.Dimension(340, 30));
+        txtUsernameRegister.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtUsernameRegisterMouseClicked(evt);
+            }
+        });
+        txtUsernameRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsernameRegisterActionPerformed(evt);
+            }
+        });
+
+        txtEmailRegister.setBackground(new java.awt.Color(255, 255, 255));
+        txtEmailRegister.setForeground(new java.awt.Color(153, 153, 153));
+        txtEmailRegister.setText("Email");
+        txtEmailRegister.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(174, 82, 168)));
+        txtEmailRegister.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtEmailRegisterMouseClicked(evt);
+            }
+        });
+
+        txtPasswordRegister.setBackground(new java.awt.Color(255, 255, 255));
+        txtPasswordRegister.setForeground(new java.awt.Color(153, 153, 153));
+        txtPasswordRegister.setText("Password");
+        txtPasswordRegister.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(174, 82, 168)));
+        txtPasswordRegister.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtPasswordRegisterMouseClicked(evt);
+            }
+        });
+
+        txtPasswordConfirmed.setBackground(new java.awt.Color(255, 255, 255));
+        txtPasswordConfirmed.setForeground(new java.awt.Color(153, 153, 153));
+        txtPasswordConfirmed.setText("Confirm password");
+        txtPasswordConfirmed.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(174, 82, 168)));
+        txtPasswordConfirmed.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtPasswordConfirmedMouseClicked(evt);
+            }
+        });
+
+        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel5.setText("Log in");
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jRadioButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtPasswordConfirmed, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                                    .addComponent(txtPasswordRegister, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                                    .addComponent(txtEmailRegister, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                                    .addComponent(txtUsernameRegister, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(jButton1)))
+                                .addGap(108, 108, 108))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5)
+                        .addGap(45, 45, 45))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(107, 107, 107)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(txtUsernameRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtEmailRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtPasswordRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtPasswordConfirmed, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jLabel3))
+                .addGap(41, 41, 41)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5))
+                .addGap(74, 74, 74))
+        );
+
+        jlMinimizeRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlMinimizeRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/MinimizarBlanco.png"))); // NOI18N
+        jlMinimizeRegister.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jlMinimizeRegister.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jlMinimizeRegister.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlMinimizeRegisterMouseClicked(evt);
+            }
+        });
+
+        jlClosesRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlClosesRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/CerrarBlanco.png"))); // NOI18N
+        jlClosesRegister.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jlClosesRegister.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jlClosesRegisterMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout rSPanelGradiente1Layout = new javax.swing.GroupLayout(rSPanelGradiente1);
         rSPanelGradiente1.setLayout(rSPanelGradiente1Layout);
         rSPanelGradiente1Layout.setHorizontalGroup(
             rSPanelGradiente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1070, Short.MAX_VALUE)
+            .addGroup(rSPanelGradiente1Layout.createSequentialGroup()
+                .addContainerGap(105, Short.MAX_VALUE)
+                .addGroup(rSPanelGradiente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rSPanelGradiente1Layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(105, 105, 105))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rSPanelGradiente1Layout.createSequentialGroup()
+                        .addComponent(jlMinimizeRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jlClosesRegister)
+                        .addGap(22, 22, 22))))
         );
         rSPanelGradiente1Layout.setVerticalGroup(
             rSPanelGradiente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 678, Short.MAX_VALUE)
+            .addGroup(rSPanelGradiente1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(rSPanelGradiente1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlMinimizeRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlClosesRegister))
+                .addGap(30, 30, 30)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -59,6 +261,44 @@ public class RegisterView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        this.setVisible(false);
+        HomeView homeview = new HomeView();
+        homeview.setVisible(true);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void txtUsernameRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameRegisterActionPerformed
+    
+    }//GEN-LAST:event_txtUsernameRegisterActionPerformed
+
+    private void txtUsernameRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsernameRegisterMouseClicked
+        txtUsernameRegister.setText("");
+    }//GEN-LAST:event_txtUsernameRegisterMouseClicked
+
+    private void txtEmailRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtEmailRegisterMouseClicked
+        txtEmailRegister.setText("");
+    }//GEN-LAST:event_txtEmailRegisterMouseClicked
+
+    private void txtPasswordRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtPasswordRegisterMouseClicked
+        txtPasswordRegister.setText("");
+    }//GEN-LAST:event_txtPasswordRegisterMouseClicked
+
+    private void txtPasswordConfirmedMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtPasswordConfirmedMouseClicked
+        txtPasswordConfirmed.setText("");
+    }//GEN-LAST:event_txtPasswordConfirmedMouseClicked
+
+    private void jlMinimizeRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlMinimizeRegisterMouseClicked
+        this.setState(RegisterView.ICONIFIED);
+    }//GEN-LAST:event_jlMinimizeRegisterMouseClicked
+
+    private void jlClosesRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlClosesRegisterMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jlClosesRegisterMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -70,7 +310,7 @@ public class RegisterView extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -95,6 +335,20 @@ public class RegisterView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JLabel jlClosesRegister;
+    private javax.swing.JLabel jlMinimizeRegister;
     private rspanelgradiente.RSPanelGradiente rSPanelGradiente1;
+    private javax.swing.JTextField txtEmailRegister;
+    private javax.swing.JTextField txtPasswordConfirmed;
+    private javax.swing.JTextField txtPasswordRegister;
+    private javax.swing.JTextField txtUsernameRegister;
     // End of variables declaration//GEN-END:variables
 }
