@@ -5,11 +5,17 @@
  */
 package View;
 
+import Controller.RegisterController;
+import java.sql.SQLException;
+import java.util.logging.Level;
+
 /**
  *
  * @author Sheccid
  */
 public class RegisterView extends javax.swing.JFrame {
+
+    RegisterController SendToController;
 
     /**
      * Creates new form RegisterView
@@ -32,7 +38,7 @@ public class RegisterView extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btRegister = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         txtUsernameRegister = new javax.swing.JTextField();
         txtEmailRegister = new javax.swing.JTextField();
@@ -72,12 +78,17 @@ public class RegisterView extends javax.swing.JFrame {
         jLabel3.setText("terms and conditions");
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonregisterOFF.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonregisterON.png"))); // NOI18N
-        jButton1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonregisterON.png"))); // NOI18N
+        btRegister.setBackground(new java.awt.Color(255, 255, 255));
+        btRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonregisterOFF.png"))); // NOI18N
+        btRegister.setBorder(null);
+        btRegister.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btRegister.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonregisterON.png"))); // NOI18N
+        btRegister.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonregisterON.png"))); // NOI18N
+        btRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btRegisterActionPerformed(evt);
+            }
+        });
 
         jLabel4.setForeground(new java.awt.Color(153, 153, 153));
         jLabel4.setText("You have an account?");
@@ -160,7 +171,7 @@ public class RegisterView extends javax.swing.JFrame {
                                     .addComponent(txtUsernameRegister, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(jButton1)))
+                                        .addComponent(btRegister)))
                                 .addGap(108, 108, 108))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -192,7 +203,7 @@ public class RegisterView extends javax.swing.JFrame {
                     .addComponent(jRadioButton1)
                     .addComponent(jLabel3))
                 .addGap(41, 41, 41)
-                .addComponent(jButton1)
+                .addComponent(btRegister)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -272,7 +283,7 @@ public class RegisterView extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void txtUsernameRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameRegisterActionPerformed
-    
+
     }//GEN-LAST:event_txtUsernameRegisterActionPerformed
 
     private void txtUsernameRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsernameRegisterMouseClicked
@@ -298,6 +309,21 @@ public class RegisterView extends javax.swing.JFrame {
     private void jlClosesRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlClosesRegisterMouseClicked
         System.exit(0);
     }//GEN-LAST:event_jlClosesRegisterMouseClicked
+
+    private void btRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRegisterActionPerformed
+
+        String Username = txtUsernameRegister.getText();
+        String Password = txtPasswordRegister.getText();
+        String Email = txtEmailRegister.getText();
+        SendToController = new RegisterController();
+
+        try {
+            SendToController.Insert(Username, Email, Password);
+        } catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(RegisterView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_btRegisterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -335,7 +361,7 @@ public class RegisterView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btRegister;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

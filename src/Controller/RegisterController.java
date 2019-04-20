@@ -1,14 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
+
+import Model.RegisterModel;
+import java.sql.SQLException;
 
 /**
  *
  * @author Sheccid
  */
 public class RegisterController {
-    
+
+    RegisterModel SendToModel;
+
+    public void Insert(String Username, String Email, String Password) throws SQLException {
+
+        SendToModel = new RegisterModel();
+        SendToModel.setUsername(Username);
+        SendToModel.setPassword(Password);
+        SendToModel.setEmail(Email);
+
+        SendToModel.Insert();
+    }
+
 }

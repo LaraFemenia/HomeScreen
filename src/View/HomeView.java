@@ -104,6 +104,7 @@ public class HomeView extends javax.swing.JFrame {
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonloginOFF.png"))); // NOI18N
         jButton1.setBorder(null);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setDisabledIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonregisterOFF.png"))); // NOI18N
         jButton1.setDisabledSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonloginONN.png"))); // NOI18N
         jButton1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/botonloginONN.png"))); // NOI18N
 
