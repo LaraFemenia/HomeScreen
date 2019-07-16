@@ -17,6 +17,7 @@ public class RegisterModel {
 
     //Constructor
     public RegisterModel() {
+
     }
 
     //Setters and Getters methods
@@ -26,6 +27,7 @@ public class RegisterModel {
 
     public void setUsername(String Username) {
         this.Username = Username;
+
     }
 
     public String getPassword() {
@@ -34,6 +36,7 @@ public class RegisterModel {
 
     public void setPassword(String Password) {
         this.Password = Password;
+
     }
 
     public String getEmail() {
@@ -42,12 +45,14 @@ public class RegisterModel {
 
     public void setEmail(String Email) {
         this.Email = Email;
+
     }
 
-    
-    public void Insert () throws SQLException{
-    
-        SendToDataBase = new DataBaseConection ();
-        
+    public void Insert() throws SQLException {
+
+        SendToDataBase = new DataBaseConection();
+
+        SendToDataBase.Insert("INSERT INTO `cajero`.`usuario` (`Usuario`,`Email`, `Contraseña`) VALUES ('" + this.Username + "','" + this.Email + "', '" + this.Password + "');");
+
     }
 }

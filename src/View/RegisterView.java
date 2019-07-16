@@ -8,6 +8,7 @@ package View;
 import Controller.RegisterController;
 import java.sql.SQLException;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -320,7 +321,7 @@ public class RegisterView extends javax.swing.JFrame {
         try {
             SendToController.Insert(Username, Email, Password);
         } catch (SQLException ex) {
-            java.util.logging.Logger.getLogger(RegisterView.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RegisterView.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_btRegisterActionPerformed
